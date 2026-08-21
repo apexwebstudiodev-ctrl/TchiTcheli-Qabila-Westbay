@@ -74,13 +74,18 @@ module.exports = {
         marquee: {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-50%)' }
+        },
+        eq: {
+          '0%, 100%': { transform: 'scaleY(0.25)' },
+          '50%': { transform: 'scaleY(1)' }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'pulse-dot': 'pulse-dot 2s ease-in-out infinite',
-        marquee: 'marquee 26s linear infinite'
+        marquee: 'marquee 26s linear infinite',
+        eq: 'eq 0.9s ease-in-out infinite'
       }
     }
   },

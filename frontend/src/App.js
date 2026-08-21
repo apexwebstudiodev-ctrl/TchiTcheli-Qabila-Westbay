@@ -11,6 +11,7 @@ import { Reviews } from "@/components/Reviews";
 import { Gallery } from "@/components/Gallery";
 import { Footer } from "@/components/Footer";
 import { ScrollProgress, CursorGlow } from "@/components/Anim";
+import { AmbientMusic } from "@/components/AmbientMusic";
 
 function App() {
   useEffect(() => {
@@ -42,6 +43,7 @@ function App() {
         <Gallery />
       </main>
       <Footer />
+      <AmbientMusic />
     </div>
   );
 }
