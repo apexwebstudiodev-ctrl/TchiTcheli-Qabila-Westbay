@@ -72,15 +72,18 @@ export const Reviews = () => {
             <div className="flex">
               {REVIEWS.map((r, i) => (
                 <div key={i} className="min-w-0 flex-[0_0_100%] pr-2" data-testid={`review-slide-${i}`}>
-                  <figure className="rounded-3xl border border-white/10 bg-black/40 p-10 lg:p-14">
+                  <figure className="flex min-h-[280px] flex-col rounded-3xl border border-white/10 bg-black/40 p-10 lg:p-14">
                     <Quote size={32} className="text-tchi-coral" />
-                    <blockquote className="mt-6 font-display text-2xl font-light leading-relaxed text-white/90 lg:text-3xl">
+                    <blockquote className="mt-6 flex-1 font-display text-xl font-light leading-relaxed text-white/90 lg:text-2xl">
                       "{r.quote}"
                     </blockquote>
-                    <figcaption className="mt-8 flex items-center gap-3">
+                    <figcaption className="mt-8 flex flex-wrap items-center gap-x-3 gap-y-1">
                       <Stars />
-                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/50">
+                      <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">
                         — {r.author}
+                      </span>
+                      <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/40">
+                        {r.meta}
                       </span>
                     </figcaption>
                   </figure>

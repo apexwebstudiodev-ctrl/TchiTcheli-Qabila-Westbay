@@ -119,12 +119,44 @@ export const GALLERY = [
 export const REVIEWS = [
   {
     quote:
-      "A very nice place to relax, have shisha, and watch football matches with friends. The atmosphere is always lively.",
-    author: "Regular Guest",
+      "I really enjoy visiting Tchi Tchi Cafe in Dafna. It's a very nice place to relax, have shisha, and watch football matches with friends. The atmosphere is always lively and comfortable, especially during big games. The daily business lunch offers are very reasonable and the portions are generous.",
+    author: "Bashar Mraish",
+    meta: "Local Guide · 2 months ago",
+  },
+  {
+    quote:
+      "Hidden gem alert! I had an amazing experience at Tchi Tchi Café — honestly, it exceeded expectations.",
+    author: "Abdelrahman Alsaadi",
+    meta: "Local Guide · 3 months ago",
+  },
+  {
+    quote:
+      "John was great! He treated us like it was his home and we were his guests. Clean atmosphere, very relaxing space. Definitely recommended for quick bites and a relaxed space.",
+    author: "Sahar Omar",
+    meta: "Local Guide · 7 months ago",
+  },
+  {
+    quote:
+      "Absolutely fantastic! The food was delicious, the service was quick, and the atmosphere was lovely. Highly recommend the snacks platter. Will definitely be coming back.",
+    author: "Nvjib Hr",
+    meta: "5 months ago",
+  },
+  {
+    quote:
+      "I would like to thank the entire café for the warm welcome and true hospitality that made my girlfriend's birthday unforgettable. The star of the show has to be Mr Hassan — his service, humility and kindness left a mark on us.",
+    author: "Musa & Sauleha",
+    meta: "4 months ago",
+  },
+  {
+    quote:
+      "The place is spacious and full of energy. The warm hospitality and great service make you feel like home, and the portions are decent with great presentation. Looking forward to revisiting.",
+    author: "Moi",
+    meta: "Local Guide · 2 months ago",
   },
   {
     quote:
       "This restaurant is part of my daily routine; breakfast has become an addiction, the service is excellent.",
-    author: "Breakfast Regular",
+    author: "Google Review",
+    meta: "Verified visitor",
   },
 ];
