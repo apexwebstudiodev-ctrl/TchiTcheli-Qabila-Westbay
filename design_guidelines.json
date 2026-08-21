@@ -1,0 +1,135 @@
+{
+  "project_name": "Tchi Tchi Cafe Website",
+  "theme": "dark",
+  "typography": {
+    "primary_font": "Playfair Display",
+    "secondary_font": "Outfit",
+    "rules": {
+      "headings": "Playfair Display, tracking-tight, font-black or font-light for contrast. NEVER use Inter.",
+      "body": "Outfit, leading-relaxed, text-base to text-lg.",
+      "labels": "Uppercase, tracking-[0.2em], text-xs, font-bold."
+    }
+  },
+  "colors": {
+    "archetype": "ARCHETYPE 5: LUXURY (Premium, Depth, Mystery)",
+    "background": "#0B0C10",
+    "surface": "#1F2937",
+    "surface_glass": "rgba(0, 0, 0, 0.6)",
+    "primary": "#E07A5F",
+    "primary_hover": "#D46A50",
+    "text_main": "#F3F4F6",
+    "text_muted": "#9CA3AF",
+    "border": "rgba(255, 255, 255, 0.1)"
+  },
+  "visual_enhancers": {
+    "hero_overlay": "bg-gradient-to-r from-black/80 via-black/40 to-transparent (Never go darker flatly, let the image breathe on one side.)",
+    "surfaces": "Use 'Glassmorphism' (Crystal Variant) for sticky headers: backdrop-blur-xl, bg-black/60, border-white/10, shadow-[0_8px_32px_rgba(0,0,0,0.12)]. Use flat solid surfaces for standard cards.",
+    "textures": "Add subtle grain/noise overlay to the background to break digital flatness.",
+    "hover_states": "Cards: -translate-y-1, shadow-xl, border-white/20. Buttons: scale-105 transition-transform duration-300."
+  },
+  "grids": {
+    "strategy": "MODE A: THE 'TETRIS' GRID",
+    "implementation": "Base Grid: grid-cols-1 md:grid-cols-8 lg:grid-cols-12 with wide gap-8 to gap-12. Asymmetry creates tension. Never fill 100% perfectly. Leave breathing room."
+  },
+  "layouts": {
+    "hero": "min-h-screen, asymmetrical content (left-aligned), bottom padding for scrolling.",
+    "menu_highlights": "Bento Grid protocol. Mix tall, wide, and square cards. NEVER perfect equal squares.",
+    "vibe_section": "Overlapping elements, large typography, generous padding (p-12 to p-24).",
+    "gallery": "Masonry layout or staggered CSS grid. No perfectly aligned rows.",
+    "footer": "py-24 or py-32, massive brand typography (text-[8vw]), high contrast dark background."
+  },
+  "components": {
+    "buttons": "Pill-shaped or slightly rounded (rounded-full or rounded-lg). Primary CTA solid #E07A5F, Secondary CTA outline border-white/20 hover:bg-white/10.",
+    "cards": "Cardless or max 8px border-radius (rounded-lg). Avoid Shadcn default card look. Use pure HTML/Tailwind for creative sections.",
+    "carousel": "Use Embla Carousel (Shadcn) for testimonials, customized with dark theme and no visible outer borders.",
+    "navigation": "Sticky top, crystal glass effect, logo left, links center, CTA right. Mobile: custom full-screen menu."
+  },
+  "motion": {
+    "general": "Smooth, deliberate. Use framer-motion for page load reveals (y: 20, opacity: 0).",
+    "scroll": "Use Lenis for smooth scrolling if possible. Staggered entrance for grid items.",
+    "micro_interactions": "Buttons scale up, images subtle scale on hover within overflow-hidden container."
+  },
+  "accessibility": {
+    "contrast": "Ensure text over images has sufficient text-shadow or gradient overlay. APCA compliant.",
+    "focus": "focus:ring-2 focus:ring-[#E07A5F] focus:outline-none.",
+    "aria": "Add aria-labels to all image placeholders and icon buttons."
+  },
+  "media": {
+    "image_aspect_ratios": "Hero: 16:9 or full screen. Gallery: mixed (3:4, 4:3, 1:1). Menu: mostly 1:1 or 4:5.",
+    "loading": "Lazy load all images below fold."
+  },
+  "3d_libraries": {
+    "recommendation": "Not strictly necessary for this scope, but framer-motion 3D tilt effects on menu cards can add a premium feel."
+  },
+  "image_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1756981168649-0e3c3c8a32f3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjYWZlJTIwbG91bmdlJTIwaW50ZXJpb3IlMjBzaGlzaGElMjBuaWdodHxlbnwwfHx8fDE3ODczMDc3Njh8MA&ixlib=rb-4.1.0&q=85",
+      "category": "Hero Section",
+      "description": "Luxurious dark room with green leather chesterfield sofa, representing the premium interior."
+    },
+    "vibe_shisha": {
+      "url": "https://images.pexels.com/photos/5923508/pexels-photo-5923508.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "The Vibe Section",
+      "description": "Men enjoying shisha in a cozy lounge."
+    },
+    "menu_fries": {
+      "url": "https://images.unsplash.com/photo-1669743851910-b7e19930c8a8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwyfHxyZXN0YXVyYW50JTIwZm9vZCUyMHBhc3RhJTIwZnJpZXMlMjBuYWNob3N8ZW58MHx8fHwxNzg3MzA3NzY4fDA&ixlib=rb-4.1.0&q=85",
+      "category": "Menu Highlights",
+      "description": "Chili Cheese Fries"
+    },
+    "menu_nachos": {
+      "url": "https://images.unsplash.com/photo-1564758565388-0d5da0cbb08c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxyZXN0YXVyYW50JTIwZm9vZCUyMHBhc3RhJTIwZnJpZXMlMjBuYWNob3N8ZW58MHx8fHwxNzg3MzA3NzY4fDA&ixlib=rb-4.1.0&q=85",
+      "category": "Menu Highlights",
+      "description": "Cheese Nachos"
+    },
+    "menu_pasta": {
+      "url": "https://images.unsplash.com/photo-1552580715-4d9bc27f1e2f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwzfHxyZXN0YXVyYW50JTIwZm9vZCUyMHBhc3RhJTIwZnJpZXMlMjBuYWNob3N8ZW58MHx8fHwxNzg3MzA3NzY4fDA&ixlib=rb-4.1.0&q=85",
+      "category": "Menu Highlights",
+      "description": "Penne Arrabbiata"
+    },
+    "promo_banner_bg": {
+      "url": "https://images.pexels.com/photos/10480246/pexels-photo-10480246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "Business Lunch Promo",
+      "description": "Assortment of gourmet dishes, perfect for lunch promo background."
+    },
+    "gallery_1": {
+      "url": "https://images.pexels.com/photos/18843833/pexels-photo-18843833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "Photo Gallery",
+      "description": "Decorative hookah close up."
+    },
+    "gallery_2": {
+      "url": "https://images.unsplash.com/photo-1577715694662-6bcf16c06e29?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHw0fHxyZXN0YXVyYW50JTIwZm9vZCUyMHBhc3RhJTIwZnJpZXMlMjBuYWNob3N8ZW58MHx8fHwxNzg3MzA3NzY4fDA&ixlib=rb-4.1.0&q=85",
+      "category": "Photo Gallery",
+      "description": "Shallow focus french fries."
+    },
+    "generic_food_placeholder": {
+      "url": "https://images.pexels.com/photos/27897606/pexels-photo-27897606.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "category": "Menu Highlights / Gallery",
+      "description": "Generic high-quality food spread to use for Avocado Cocktail, Qalayet Tomato, and Osmalya where specific images are missing. Apply different object-position styles to crop them differently. DO NOT USE dummyimage.com."
+    }
+  },
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Use glass-morphism effects with backdrop filters (12-24px blur).",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text.",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style.",
+    "NEVER: use AI assistant Emoji characters like \ud83e\udd16\ud83e\udde0\ud83d\udcad\ud83d\udca1\ud83d\udd2e\ud83c\udfaf etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap. Use padding like p-12, p-24.",
+    "Main agent relies on provided image URLs. NEVER use placeholder text or external placeholder services. Map missing specific images to the provided generic_food_placeholder.",
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing."
+  ],
+  "instructions_to_main_agent": {
+    "setup": "Install Playfair Display and Outfit fonts via Google Fonts import in index.css. Install lucide-react for icons.",
+    "hero_section": "Create a massive hero min-h-screen. The image should be full background with a dark gradient overlay (bg-gradient-to-r from-black/90 via-black/50 to-transparent) ensuring H1 and CTAs are readable on the left. Do not center-align the main text.",
+    "business_lunch": "Use a full-width banner layout. Use the promo_banner_bg image with a heavy dark overlay or a Glassmorphism card floating over it.",
+    "menu_grid": "Implement a Bento Grid (Tetris Grid). Use provided images for Fries, Nachos, Pasta. For Avocado Cocktail, Qalayet Tomato, Osmalya, use generic_food_placeholder but apply different crop/object-positions (e.g. object-[center_top]) so they appear distinct.",
+    "vibe_section": "Avoid standard 50/50 split. Make the image span 7 columns and the text span 5 columns, overlapping slightly with z-index manipulation.",
+    "testimonials": "Use a marquee (react-fast-marquee) for the 4.3 star reviews. Keep cards dark, minimal, borderless.",
+    "footer": "Include massive 'TCHI TCHI' text. Embed the Google map on one side. List the 24/7 hours prominently."
+  }
+}
