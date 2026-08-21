@@ -3,6 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import { REVIEWS } from "../data/content";
+import { MaskedReveal, EASE } from "./Anim";
 
 const Stars = () => (
   <div className="flex items-center gap-1" aria-label="4.3 out of 5 stars">
@@ -34,22 +35,31 @@ export const Reviews = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.9, ease: EASE }}
           className="mb-14 flex flex-col items-start gap-6 md:flex-row md:items-end md:justify-between"
         >
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.3em] text-tchi-coral">Customer Reviews</span>
-            <h2 data-testid="reviews-title" className="mt-4 font-display text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Word on <span className="italic text-tchi-coral">Dafna Street</span>
-            </h2>
+            <MaskedReveal className="mt-4">
+              <h2 data-testid="reviews-title" className="font-display text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+                Word on <span className="italic text-tchi-coral">Dafna Street</span>
+              </h2>
+            </MaskedReveal>
           </div>
-          <div data-testid="reviews-rating" className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-4">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 180, damping: 15, delay: 0.3 }}
+            data-testid="reviews-rating"
+            className="flex items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-4"
+          >
             <span className="font-display text-4xl font-black text-white">4.3</span>
             <div>
               <Stars />
               <p className="mt-1 text-xs font-bold uppercase tracking-[0.15em] text-white/50">1,100+ reviews</p>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.div

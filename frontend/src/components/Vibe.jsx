@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Sunrise, Flame, Trophy, Sparkles, HeartHandshake } from "lucide-react";
 import { IMAGES } from "../data/content";
 import { PhotoSlot } from "./PhotoSlot";
+import { MaskedReveal, ParallaxImg, EASE } from "./Anim";
 
 const AMENITIES = [
   {
@@ -41,24 +42,29 @@ export const Vibe = () => (
     <div className="mx-auto max-w-7xl px-6 lg:px-12">
       <div className="grid items-start gap-10 lg:grid-cols-12">
         <motion.div
-          initial={{ opacity: 0, x: -24 }}
+          initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1, ease: EASE }}
           className="group relative lg:col-span-7"
         >
           <div className="relative overflow-hidden rounded-3xl border border-white/10">
-            <img
+            <ParallaxImg
               src={IMAGES.vibe.url}
               alt={IMAGES.vibe.alt}
-              loading="lazy"
               data-testid="vibe-image"
-              className="h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105 lg:h-[620px]"
+              className="h-[420px] w-full lg:h-[620px]"
+              imgClassName="transition-transform duration-700 group-hover:scale-110"
+              speed={9}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
           </div>
           <PhotoSlot label="Your vibe photo here" />
-          <div
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6, y: 20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 200, damping: 16, delay: 0.45 }}
             data-testid="vibe-rating-chip"
             className="absolute -bottom-6 left-6 z-20 rounded-2xl border border-white/10 bg-tchi-surface px-6 py-4 shadow-2xl lg:left-10"
           >
@@ -66,27 +72,33 @@ export const Vibe = () => (
             <span className="ml-2 text-xs font-bold uppercase tracking-[0.2em] text-white/60">
               from 1,100+ reviews
             </span>
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 24 }}
+          initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.1 }}
+          transition={{ duration: 1, delay: 0.1, ease: EASE }}
           className="relative z-10 rounded-3xl border border-white/10 bg-[#0B0C10]/90 p-8 backdrop-blur-xl lg:col-span-5 lg:-ml-16 lg:mt-16 lg:p-12"
         >
           <span className="text-xs font-bold uppercase tracking-[0.3em] text-tchi-coral">The Vibe & Amenities</span>
-          <h2 data-testid="vibe-title" className="mt-4 font-display text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl">
-            Where Doha comes to <span className="italic text-tchi-coral">stay a while</span>
-          </h2>
+          <MaskedReveal className="mt-4">
+            <h2 data-testid="vibe-title" className="font-display text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl">
+              Where Doha comes to <span className="italic text-tchi-coral">stay a while</span>
+            </h2>
+          </MaskedReveal>
 
           <div className="mt-10 space-y-6">
             {AMENITIES.map((a, i) => (
-              <div
+              <motion.div
                 key={a.id}
+                initial={{ opacity: 0, y: 28, filter: "blur(6px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.7, delay: 0.2 + i * 0.09, ease: EASE }}
                 data-testid={a.id}
-                className="flex gap-5 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/20"
+                className="flex gap-5 rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-colors duration-300 hover:border-tchi-coral/40 hover:bg-white/[0.05]"
               >
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-tchi-coral/15">
                   <a.icon size={18} className="text-tchi-coral" />
@@ -95,7 +107,7 @@ export const Vibe = () => (
                   <h3 className="font-display text-lg font-bold text-white">{a.title}</h3>
                   <p className="mt-1 text-sm leading-relaxed text-white/60">{a.text}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>

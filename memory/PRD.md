@@ -22,6 +22,7 @@ All sections listed in problem statement; image placeholders owner-swappable; ph
 - Google Maps embed (8GGQ+46 Doha) in footer, dark-styled
 - tel: link (+974 7030 0009), Talabat outbound link, anchor nav, mobile menu
 - Stock photo placeholders throughout with hover "Your photo here" hints; swap via content.js
+- Premium scroll experience (added later): Lenis buttery smooth scrolling, coral scroll-progress bar, hero parallax + content drift/fade, staggered blur-rise reveals, masked line reveals on all section titles, scrolling marquee ticker strip, parallax food/gallery images, floating price card with 0→59 count-up, cursor glow follower, parallax giant footer type
 
 ## Backlog / Next Tasks
 - P1: Replace stock images with owner's real photos (owner action or upload feature)

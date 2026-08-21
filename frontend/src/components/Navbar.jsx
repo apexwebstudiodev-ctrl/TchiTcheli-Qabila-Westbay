@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Menu, X, Bike } from "lucide-react";
 import { TALABAT_URL } from "../data/content";
+import { EASE } from "./Anim";
 
 const LINKS = [
   { label: "Business Lunch", href: "#lunch", id: "nav-link-lunch" },
@@ -14,7 +16,10 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header
+    <motion.header
+      initial={{ y: -90 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.9, ease: EASE, delay: 0.1 }}
       data-testid="site-header"
       className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.12)]"
     >
@@ -58,7 +63,10 @@ export const Navbar = () => {
       </nav>
 
       {open && (
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: -16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: EASE }}
           data-testid="nav-mobile-menu"
           className="flex flex-col gap-6 border-t border-white/10 bg-[#0B0C10]/95 px-6 py-10 backdrop-blur-xl lg:hidden"
         >
@@ -82,8 +90,8 @@ export const Navbar = () => {
           >
             <Bike size={14} /> Order Delivery
           </a>
-        </div>
+        </motion.div>
       )}
-    </header>
+    </motion.header>
   );
 };
