@@ -3,7 +3,7 @@
 
 export const PHONE_DISPLAY = "+974 7030 0009";
 export const PHONE_TEL = "tel:+97470300009";
-export const TALABAT_URL = "https://www.talabat.com/qatar";
+export const TALABAT_URL = "https://www.talabat.com/qatar/restaurant/688721/tche-tche-restaurant-and-cafe-al-dafna?aid=1753";
 export const WEBSITE_URL = "https://tchetche.qa";
 export const MAPS_EMBED = "https://www.google.com/maps?q=8GGQ%2B46%20Doha%20Qatar&output=embed";
 export const MAPS_LINK = "https://www.google.com/maps/search/?api=1&query=8GGQ%2B46+Doha";

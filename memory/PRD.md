@@ -26,6 +26,7 @@ All sections listed in problem statement; image placeholders owner-swappable; ph
 
 ## Backlog / Next Tasks
 - P1: Replace stock images with owner's real photos (owner action or upload feature)
-- P1: Point "Order Delivery" to exact Talabat store URL (currently talabat.com/qatar)
-- P2: Full menu page with prices; WhatsApp order button; Instagram feed link
+- DONE: "Order Delivery" points to exact Talabat store URL
+- DONE: Reservation pop-up is a real booking form (name/date/time/party size) sent to WhatsApp (+974 7030 0009)
+- P2: Full menu page with prices; Instagram feed link
 - P2: Arabic (RTL) version
