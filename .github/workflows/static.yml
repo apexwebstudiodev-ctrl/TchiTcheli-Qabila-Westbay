@@ -38,9 +38,10 @@ jobs:
           node-version: 20
 
       - name: Install and Build
+        - name: Install and Build
         run: |
           cd frontend
-          npm install
+          npm install --legacy-peer-deps
           npm run build
 
       - name: Setup Pages
